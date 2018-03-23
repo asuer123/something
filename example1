@@ -1,0 +1,12 @@
+import urllib.request    //网页连接库
+import re               //正则
+nothing = str(8022)  
+for i in range(400):  
+    path = 'http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing='  欲改变=后面的数值，留出位置
+    text = urllib.request.urlopen(path+nothing).read()    读取网页内容，注意返回bytes格式
+    text = text.decode('GBK')               讲text改为str
+    a = re.findall(r'(\d+)',text)         正则
+    print (i, text)                       
+    if a == []:  
+        break  
+    nothing = str(a[len(a)-1])  
