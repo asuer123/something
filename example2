@@ -1,5 +1,3 @@
-# something
-just pieces
 import re
 f = open("E:\\python\\a.txt","r")
 dd = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"  
