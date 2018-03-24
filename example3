@@ -1,0 +1,10 @@
+import pickle                                  pickle文件用法
+fp = open('E:\\python\\banner.p','rb')         注意以二进制文件打开
+data = pickle.load(fp)  
+fp.close()  
+output = open('E:\\python\\out5.txt','w')  
+for i in data:  
+    for j in i:  
+        output.write(j[0]*j[1])              
+    output.write('\n')  
+output.close()  
