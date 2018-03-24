@@ -1,0 +1,18 @@
+import zipfile  
+import re  
+file = zipfile.ZipFile('E:\\python\\channel.zip','r')  
+txtfile = '%s.txt'  
+nothing = 90052  
+output = open('output6.txt','w')  
+while 1>0:  
+    text = file.read(txtfile % nothing)
+    text = text.decode('GBK') 
+    a = re.findall(r'(\d+)',text)  
+    print (text) 
+    b=file.getinfo(txtfile % nothing).comment
+    b=b.decode('GBK')
+    output.write(b)  
+    if a == []:  
+        break  
+    nothing = a[len(a)-1]  
+output.close()  
